@@ -1,76 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abitur Biology 2025 – Learning Platform</title>
+  <title>Biologie Abitur 2025 – Grundkurs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background-color: #2e7d32; color: white; padding: 1rem; text-align: center; }
-    nav { background: #388e3c; padding: 1rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    main { padding: 2rem; }
-    section { margin-bottom: 3rem; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h2 { color: #2e7d32; }
-    .flashcard { background: #e8f5e9; padding: 1rem; border-radius: 8px; margin: 1rem 0; display: flex; justify-content: space-between; align-items: center; }
-    .flashcard span { font-weight: bold; }
+    .quiz-card { display: none; }
+    .quiz-card.active { display: block; }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Abitur Biology 2025</h1>
-    <p>Complete Learning Platform: Physiology, Neurobiology, Ecology, Genetics & Evolution</p>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-green-600 text-white p-6">
+    <h1 class="text-3xl font-bold">Biologie Lernen – NRW Abitur 2025 (Grundkurs)</h1>
+    <p class="mt-2">Themen: Physiologie, Neurobiologie, Ökologie, Genetik & Evolution</p>
   </header>
-  <nav>
-    <a href="#physiology">Physiology</a>
-    <a href="#neurobiology">Neurobiology</a>
-    <a href="#ecology">Ecology</a>
-    <a href="#genetics">Genetics & Evolution</a>
+
+  <nav class="bg-green-100 p-4 flex gap-4 flex-wrap">
+    <a href="#physiology" class="text-green-800 font-semibold">🫁 Physiologie</a>
+    <a href="#neurobiology" class="text-green-800 font-semibold">🧠 Neurobiologie</a>
+    <a href="#ecology" class="text-green-800 font-semibold">🌍 Ökologie</a>
+    <a href="#genetics" class="text-green-800 font-semibold">🧬 Genetik & Evolution</a>
+    <a href="#flashcards" class="text-green-800 font-semibold">🃏 Lernkarten</a>
+    <a href="#quizzes" class="text-green-800 font-semibold">❓ Quiz</a>
   </nav>
-  <main>
+
+  <main class="p-6 space-y-16">
     <section id="physiology">
-      <h2>Physiology</h2>
-      <p><strong>Topics:</strong> Glycolysis, Citric Acid Cycle, Electron Transport Chain, ATP synthesis, Photosynthesis (light & dark reactions).</p>
-      <p><em>Detailed explanations and interactive diagrams will go here.</em></p>
+      <h2 class="text-2xl font-bold mb-4">🫁 Stoffwechselphysiologie</h2>
+      <p>Vertiefung in Fotosynthese, Zellatmung, Enzyme, Energiegewinnung und Stoffwechselregulation.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/CellRespiration.svg" alt="Zellatmung Diagramm" class="my-4 w-full max-w-2xl">
+      <p>Oben siehst du eine Übersicht der Zellatmung (Glykolyse, Citratzyklus, Atmungskette).</p>
     </section>
 
     <section id="neurobiology">
-      <h2>Neurobiology</h2>
-      <p><strong>Topics:</strong> Structure of neurons, resting and action potentials, synaptic transmission, effect of drugs, neuromuscular junction.</p>
-      <p><em>Includes step-by-step animations of signal transmission.</em></p>
+      <h2 class="text-2xl font-bold mb-4">🧠 Neurobiologie</h2>
+      <p>Lerne Aufbau und Funktion von Nervenzellen, Synapsen und Erregungsweiterleitung.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Neuron_Hand-tuned.svg" alt="Neuron Diagramm" class="my-4 w-full max-w-xl">
+      <p>Diagramm zeigt den Aufbau einer Nervenzelle – wichtig für das Verständnis von Ruhe- und Aktionspotenzial.</p>
     </section>
 
     <section id="ecology">
-      <h2>Ecology</h2>
-      <p><strong>Topics:</strong> Biotic/abiotic factors, energy flow, nutrient cycles, ecological niches, species interactions, human impact.</p>
-      <p><em>Graphs like tolerance curves and succession models will be included.</em></p>
+      <h2 class="text-2xl font-bold mb-4">🌍 Ökologie</h2>
+      <p>Ökologische Nischen, Populationen, Energiefluss und Einfluss des Menschen auf Ökosysteme.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Ecosystem_services_diagram_en.svg" alt="Energiefluss Ökosystem" class="my-4 w-full max-w-2xl">
     </section>
 
     <section id="genetics">
-      <h2>Genetics & Evolution</h2>
-      <p><strong>Topics:</strong> DNA structure, transcription, translation, mutations, inheritance, natural selection, genetic drift, speciation.</p>
-      <p><em>Interactive Punnett squares and evolutionary tree builders coming soon.</em></p>
+      <h2 class="text-2xl font-bold mb-4">🧬 Genetik & Evolution</h2>
+      <p>DNA, Proteinbiosynthese, Genregulation, Mutationen und Evolutionsmechanismen.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/DNA_replication_split.svg" alt="DNA-Replikation" class="my-4 w-full max-w-xl">
     </section>
 
     <section id="flashcards">
-      <h2>Glossary Flashcards</h2>
-      <div class="flashcard">
-        <span>Neuron</span>
-        <span>A cell specialized to transmit electrical signals in the nervous system.</span>
+      <h2 class="text-2xl font-bold mb-4">🃏 Glossar Lernkarten</h2>
+      <div id="flashcard-app" class="bg-white p-4 shadow rounded-lg max-w-md">
+        <p id="term" class="text-xl font-semibold mb-2">Begriff</p>
+        <button onclick="revealDefinition()" class="bg-green-600 text-white px-4 py-2 rounded">Definition anzeigen</button>
+        <p id="definition" class="mt-4 hidden">Definition...</p>
+        <div class="mt-4">
+          <button onclick="nextCard()" class="bg-gray-300 px-4 py-2 rounded">Nächste Karte</button>
+        </div>
       </div>
-      <div class="flashcard">
-        <span>ATP</span>
-        <span>Energy currency of the cell, formed during respiration.</span>
-      </div>
-      <div class="flashcard">
-        <span>Ecological niche</span>
-        <span>The role and space an organism occupies in an ecosystem.</span>
-      </div>
-      <div class="flashcard">
-        <span>Mutation</span>
-        <span>A change in the DNA sequence that can affect gene function.</span>
+    </section>
+
+    <section id="quizzes">
+      <h2 class="text-2xl font-bold mb-4">❓ Quiz: Zellatmung</h2>
+      <div class="quiz-card active bg-white p-4 rounded shadow max-w-lg">
+        <p class="mb-2">1. Welches Molekül liefert am meisten ATP bei der Zellatmung?</p>
+        <button onclick="alert('Richtig!')" class="bg-green-600 text-white px-4 py-1 m-1 rounded">NADH</button>
+        <button onclick="alert('Falsch – NADH liefert mehr als FADH₂')" class="bg-red-500 text-white px-4 py-1 m-1 rounded">FADH₂</button>
+        <button onclick="alert('Falsch – Glukose ist Ausgangsstoff')" class="bg-red-500 text-white px-4 py-1 m-1 rounded">Glukose</button>
       </div>
     </section>
   </main>
+
+  <script>
+    const glossary = [
+      { term: 'ATP', definition: 'Energieeinheit der Zelle – Adenosintriphosphat' },
+      { term: 'Neuron', definition: 'Nervenzelle zur Informationsweiterleitung im Nervensystem' },
+      { term: 'Fotosynthese', definition: 'Umwandlung von Lichtenergie in chemische Energie in Pflanzen' },
+      { term: 'DNA', definition: 'Desoxyribonukleinsäure – Träger genetischer Information' },
+    ];
+    let currentIndex = 0;
+
+    function revealDefinition() {
+      document.getElementById('definition').textContent = glossary[currentIndex].definition;
+      document.getElementById('definition').classList.remove('hidden');
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % glossary.length;
+      document.getElementById('term').textContent = glossary[currentIndex].term;
+      document.getElementById('definition').classList.add('hidden');
+    }
+
+    window.onload = () => {
+      document.getElementById('term').textContent = glossary[0].term;
+    };
+  </script>
 </body>
 </html>
